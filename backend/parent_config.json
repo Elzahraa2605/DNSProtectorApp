@@ -37,5 +37,5 @@
     "reg", "hta", "wsf", "lnk"
   ],
   "max_file_size_mb": 50,
-  "virustotal_api_key": "4e5754649bb6b8643b1b6718e27390138805e4950a196aeeb29352c7b3913e9d"
+  "virustotal_api_key": "YOUR_VIRUSTOTAL_API_KEY_HERE"
 }
