@@ -25,8 +25,8 @@ def load_config():
 # ════════════════════════════════════════════════════════
 # Static Settings
 # ════════════════════════════════════════════════════════
-GOOGLE_SAFE_BROWSING_API_KEY = "AIzaSyBS8HoM7ygS9hZblXmqDXAHcxapPgatwbI"
-MY_SECRET_KEY = "zahraa-secret-2026"
+GOOGLE_SAFE_BROWSING_API_KEY = "YOUR_API_KEY_HERE"  # Replace with your actual API key
+MY_SECRET_KEY = "supersecretkey123"  # Simple API key for authentication (change in production)
 
 SUSPICIOUS_TLDS = [
     ".xyz", ".top", ".click", ".link", ".zip", ".mov",
