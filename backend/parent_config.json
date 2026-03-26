@@ -1,0 +1,41 @@
+{
+  "blocked_apps": [
+    {
+      "name": "Instagram",
+      "package": "com.instagram.android",
+      "domains": ["instagram.com", "cdninstagram.com", "instagram.fxxx.net"]
+    },
+    {
+      "name": "TikTok",
+      "package": "com.zhiliaoapp.musically",
+      "domains": ["tiktok.com", "tiktokv.com", "musical.ly"]
+    },
+    {
+      "name": "Snapchat",
+      "package": "com.snapchat.android",
+      "domains": ["snapchat.com", "snap.com"]
+    },
+    {
+      "name": "WhatsApp Web",
+      "package": "com.whatsapp",
+      "domains": ["web.whatsapp.com", "whatsapp.com"]
+    },
+    {
+      "name": "Facebook",
+      "package": "com.facebook.katana",
+      "domains": ["facebook.com", "m.facebook.com", "fb.com", "fbcdn.net"]
+    },
+    {
+      "name": "Twitter/X",
+      "package": "com.twitter.android",
+      "domains": ["twitter.com", "x.com", "t.co", "twimg.com"]
+    }
+  ],
+  "blocked_download_types": [
+    "exe", "bat", "cmd", "com", "pif", "scr", "vbs", "js",
+    "jar", "apk", "dex", "so", "sh", "ps1", "msi", "dll",
+    "reg", "hta", "wsf", "lnk"
+  ],
+  "max_file_size_mb": 50,
+  "virustotal_api_key": "4e5754649bb6b8643b1b6718e27390138805e4950a196aeeb29352c7b3913e9d"
+}

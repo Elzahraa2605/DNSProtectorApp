@@ -7,7 +7,7 @@ import com.facebook.react.ReactHost
 import com.facebook.react.ReactNativeApplicationEntryPoint.loadReactNative
 import com.facebook.react.defaults.DefaultReactHost.getDefaultReactHost
 
-// الإضافات اللازمة لـ Nitro DNS (حقن DoH داخل التطبيق)
+// الإضافات اللازمة لـ Nitro DNS
 import com.nitrodns.NitroOkHttpClientFactory
 import com.facebook.react.modules.network.OkHttpClientProvider
 
@@ -17,17 +17,14 @@ class MainApplication : Application(), ReactApplication {
     getDefaultReactHost(
       context = applicationContext,
       packageList = PackageList(this).packages.apply {
-        // هنا ممكن نضيف modules تانية في المستقبل لو احتجنا
+        add(FileMonitorPackage())
       },
     )
   }
 
   override fun onCreate() {
     super.onCreate()
-    
-    // حقن Nitro DNS factory لاعتراض كل طلبات الشبكة داخل التطبيق (fetch, WebView, إلخ)
     OkHttpClientProvider.setOkHttpClientFactory(NitroOkHttpClientFactory())
-    
     loadReactNative(this)
   }
 }
