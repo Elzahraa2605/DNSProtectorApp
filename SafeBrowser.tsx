@@ -13,7 +13,7 @@ const SECRET_KEY  = 'zahraa-secret-2026';
 const HOME_URL    = 'https://www.google.com';
 const HEADERS     = { 'Content-Type': 'application/json', 'X-API-KEY': SECRET_KEY };
 
-// ── امتدادات الملفات ──────────────────────────────────
+// ── امتدادات الملفات (تم إضافة txt لاكتشاف EICAR وحذف php لفتح الصفحات) ──
 const DOWNLOAD_EXTENSIONS = [
   'exe','bat','cmd','msi','dll','apk','dex','sh','ps1','vbs','jar','hta','wsf','com','pif','scr',
   'zip','rar','7z','tar','gz','bz2','xz','cab','iso','dmg',
@@ -21,12 +21,10 @@ const DOWNLOAD_EXTENSIONS = [
   'pdf','doc','docx','xls','xlsx','ppt','pptx','odt','ods',
   'mp3','mp4','avi','mov','mkv','flv','wmv','webm',
   'jpg','jpeg','png','gif','bmp','svg','webp','ico',
-  'py','ts','rb','pl','php','lua',
+  'txt' // <-- تم الإضافة هنا عشان ملفات EICAR الوهمية
 ];
 
 // ── JS يُحقن في كل صفحة ──────────────────────────────
-// الهدف: اعتراض كل ضغطة على رابط تحميل قبل أي حاجة تانية
-// بيمنع Android Download Manager من يشتغل خالص
 const INTERCEPT_JS = `
 (function() {
   var EXTS = ${JSON.stringify(DOWNLOAD_EXTENSIONS)};
